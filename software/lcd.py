@@ -44,37 +44,37 @@ def display_text(lcd, category_name, score, text):
 # create customized message to user based on category
 def custom_feedback(lcd, category_name, score, label_name):
     if label_name == "battery":
-        display_text(lcd, category_name, score, "Please dispose  in hazardous was-te facility! No-t here!")
+        display_text(lcd, category_name, score, "Please dispose  in hazardous wa-ste facility!   Not here!")
 
     elif label_name == "biological":
-        display_text(lcd, category_name, score, "It will decompos-e naturally and enrich the soil!")
+        display_text(lcd, category_name, score, "It will decompo-se naturally andenrich the soil!")
 
     elif label_name == "brown-glass":
         display_text(lcd, category_name, score, "Please empty it before disposal!")
 
     elif label_name == "cardboard":
-        display_text(lcd, category_name, score, "Please dispose  of any food left-overs in the co-mpost bin if pr-esent!")
+        display_text(lcd, category_name, score, "Please dispose  of any food lef-tovers in the  compost bin if  present!")
 
     elif label_name == "clothes":
-        display_text(lcd, category_name, score, "Please consider donating them if they are in goo-d condition.")
+        display_text(lcd, category_name, score, "Please consider donating them if they are in    good condition.")
 
     elif label_name == "green-glass":
         display_text(lcd, category_name, score, "Please empty it before disposal!")
 
     elif label_name == "metal":
-        display_text(lcd, category_name, score, "They can be melt-ed down and res-haped into new products!")
+        display_text(lcd, category_name, score, "They can be mel-ted down and re-shaped into new products!")
 
     elif label_name == "paper":
-        display_text(lcd, category_name, score, "It can be reused to make new pap-er products!")
+        display_text(lcd, category_name, score, "It can be reused to make new pa-per products!")
 
     elif label_name == "plastic":
         display_text(lcd, category_name, score, "Please empty it before disposal!")
 
     elif label_name == "shoes":
-        display_text(lcd, category_name, score, "Please consider donating them if in good conditi-on.")
+        display_text(lcd, category_name, score, "Please consider donating them if in good condit-ion.")
 
     elif label_name == "trash":
-        display_text(lcd, category_name, score, "Anything that ca-n not be recycl-ed or composted goes here!")
+        display_text(lcd, category_name, score, "Anything that   can not be recy-cled or compost-ed goes here!")
                     
     else:
         display_text(lcd, category_name, score, "Please empty it before disposal!")
