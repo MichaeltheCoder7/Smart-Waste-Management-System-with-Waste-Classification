@@ -11,7 +11,7 @@ Infrared Motion Sensor
 Python3  
 Pytorch  
 RPi.GPIO  
-numpy  
+NumPy  
 OpenCV  
 
 **Raspberry Pi 4 settings**   
