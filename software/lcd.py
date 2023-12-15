@@ -53,10 +53,10 @@ def custom_feedback(lcd, category_name, score, label_name):
         display_text(lcd, category_name, score, "Please empty it before disposal!")
 
     elif label_name == "cardboard":
-        display_text(lcd, category_name, score, "Please dispose  of any food lef-tovers in the  compost bin if  present!")
+        display_text(lcd, category_name, score, "Please dispose  of any food lef-tovers in the   compost bin if  present!")
 
     elif label_name == "clothes":
-        display_text(lcd, category_name, score, "Please consider donating them if they are in    good condition.")
+        display_text(lcd, category_name, score, "Anything that   can not be recy-cled or compost-ed goes here!")
 
     elif label_name == "green-glass":
         display_text(lcd, category_name, score, "Please empty it before disposal!")
