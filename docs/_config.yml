@@ -5,4 +5,5 @@ show_downloads: true
 
 # Name of website
 title: Smart Waste Management System
+logo: /media/project.jpeg
 description: Project for UCLA ECEM202A/CSM213A (Fall 2023)
