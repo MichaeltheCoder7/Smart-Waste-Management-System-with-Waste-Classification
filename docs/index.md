@@ -13,3 +13,4 @@ This project develops a low-cost, energy-efficient waste classification system u
 * [Midterm Checkpoint Presentation Slides](http://github.com/MichaeltheCoder7/Smart-Waste-Management-System-with-Waste-Classification/blob/main/docs/media/midterm_presentation.pdf)
 * [Final Presentation Slides](https://github.com/MichaeltheCoder7/Smart-Waste-Management-System-with-Waste-Classification/blob/main/docs/media/final_presentation.pdf)
 * [Final Report](report)
+* [Demo Video](https://drive.google.com/file/d/1CFnXfq6EhPs5OLnpmUuMU2HnUhPhMjI9/view?usp=sharing)
