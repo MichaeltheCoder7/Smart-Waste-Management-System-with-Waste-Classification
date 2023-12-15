@@ -16,7 +16,7 @@ RPi.GPIO
 NumPy  
 OpenCV  
 
-### Raspberry Pi 4 settings     
+### Raspberry Pi 4 Settings     
 Edit the /boot/config.txt file to enable the camera:  
 start_x=1 # Enables the camera
 
