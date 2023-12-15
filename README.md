@@ -7,7 +7,7 @@ Pi Camera v2
 I2C LCD1602 Display Screen  
 Infrared Motion Sensor  
 Red LED  
-Resistor  
+220Ω Resistor  
 
 ### Software Setup   
 Python3  
