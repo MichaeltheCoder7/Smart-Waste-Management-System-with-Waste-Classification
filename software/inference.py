@@ -87,9 +87,9 @@ def inference_loop(lcd_screen):
             # create customized message to user based on category
             lcd.custom_feedback(lcd_screen, category_name, score, label_name)
                     
-            # stop running inference if 15 seconds have passed
+            # stop running inference if 10 seconds have passed
             now = time.time()
-            if now - started > 15:
+            if now - started > 10:
                 # Release the opencv resources
                 cap.release()
                 cv2.destroyAllWindows()
