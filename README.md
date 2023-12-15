@@ -16,11 +16,11 @@ OpenCV
 
 **Raspberry Pi 4 settings**   
 Edit the /boot/config.txt file to enable the camera:  
-start_x=1 # Enables the extended features such as the camera
+start_x=1 # Enables the camera
 
-gpu_mem=128 # This needs to be at least 128M for the camera processing
+gpu_mem=128 # At least 128M for camera processing
 
-#camera_auto_detect=1 # You need to remove the existing camera_auto_detect line
+#camera_auto_detect=1 # Remove the existing camera_auto_detect line
 
 **Command to Run the Program in Software Directory**  
 Python main.py
