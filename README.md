@@ -6,6 +6,8 @@ Raspberry Pi 4
 Pi Camera v2  
 I2C LCD1602 Display Screen  
 Infrared Motion Sensor  
+Red LED  
+Resistor  
 
 ### Software Setup   
 Python3  
