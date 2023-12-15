@@ -25,8 +25,9 @@ def sensor_loop(lcd_screen, ledPin, sensorPin):
     while True:
         if GPIO.input(sensorPin)==GPIO.HIGH:
             GPIO.output(ledPin,GPIO.HIGH) # turn on led
-            time.sleep(0.5)
+            time.sleep(1)
             inference.inference_loop(lcd_screen) # activate inference loop when the sensor sense infrared motion
         else:
             GPIO.output(ledPin,GPIO.LOW) # turn off led
         time.sleep(1) # sleep to save power
+
