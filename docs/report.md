@@ -11,18 +11,42 @@
 Our project develops a low-cost, energy-efficient waste classification system using a Raspberry Pi 4 and deep learning algorithms. Aimed at improving waste management, the system classifies items into categories like compost, landfill, and recycle using a modified CNN model, such as MobileNetV3. Our embedded system is designed for public and personal use and features a camera for real-time classification, a user-friendly interface, and a motion sensor for power saving. The system aims to enhance recycling rates and reduce pollution by educating users on proper disposal. Key challenges include balancing cost and technological efficiency and developing an effective feedback mechanism. Success will be measured by classification accuracy, user experience, and power consumption. The project draws on current research and utilizes resources like Kaggle’s waste datasets and MobileNetV3. Its success could significantly impact waste management processes and environmental awareness.
 
 # 1. Introduction
+## Motivation & Objective
+Waste management is a significant global problem due to the increasing amount of waste we produce and the harm it causes to the environment and human health. The world is currently facing limited availability of space for landfill sites and increasing costs for waste disposal. To help address this problem, we decided to use a Raspberry Pi 4 microprocessor to design and implement an embedded system with deep learning assistance, capable of classifying waste items using a camera into categories like compost, landfill, and recycle. The system could be placed above public waste bins or in facilities to aid and educate users about proper waste disposal, ensuring waste is correctly sorted for efficient recycling and disposal. This can lead to better resource management and reduction of environmental pollution.
 
-This section should cover the following items:
+## State of the Art & Its Limitations
+Today, waste classification typically involves manual sorting and categorization by waste management workers at recycling facilities. This process often relies on visual inspection and basic knowledge of waste types. The limitation of manual sorting is that it is time-consuming, expensive, and prone to human error. In recent years, a few companies have developed deep learning classification algorithms to help sort waste more efficiently. For example, the company AMP Robotics employs AI and robotics techniques to enhance the accuracy and efficiency of waste sorting to improve recycling rates. However, the limitation lies in the fact that these robots are designed for use in recycling facilities, making them less suitable for household or public use, and their production costs are relatively high.
 
-* Motivation & Objective: What are you trying to do and why? (plain English without jargon)
-* State of the Art & Its Limitations: How is it done today, and what are the limits of current practice?
-* Novelty & Rationale: What is new in your approach and why do you think it will be successful?
-* Potential Impact: If the project is successful, what difference will it make, both technically and broadly?
-* Challenges: What are the challenges and risks?
-* Requirements for Success: What skills and resources are necessary to perform the project?
-* Metrics of Success: What are metrics by which you would check for success?
+## Novelty & Rationale
+Our embedded waste management system is designed for personal or public use and is built to operate with low power consumption and at a low cost. We aim to assist users in correctly sorting their waste, thereby enhancing recycling rates right from the initial phase of waste disposal. In addition, with the implementation and modification of a CNN model like MobileNetV3, we achieved high accuracy. With our system, users can effortlessly classify their waste and dispose of it properly when they are unsure about which trash bin to use. Furthermore, we customized the feedback system that can provide users with proper tips. For example, we suggest users remove any food leftover from the box and place them into the correct bins, and empty the bottle before disposal. Additionally, we prioritize user-friendly design to enhance the system’s practicality and promote user adoption, contributing to its potential success.
+
+## Potential Impact
+The project makes a dual impact, both technically and broadly. On a technical level, the use of high-accuracy deep learning algorithms would transform the waste management processes, significantly reducing the time required for waste sorting at recycling facilities. In terms of broad impact, our embedded waste management system aims to help raise awareness of the growing environmental issues. By making recycling easier, we hope to increase recycling rates and, in turn, do our part in reducing pollution.
+
+## Challenges
+There are three major challenges in this project. The first challenge is cost constraints. It is essential to minimize both power consumption and production costs. Balancing cost and technological advancements is challenging. The second challenge is the implementation of the customized feedback system. Our goal is to provide users with valuable suggestions that can help them make the right choices, but assessing the effectiveness of these suggestions comes with its own set of challenges. The third challenge is attaining high accuracy. While we trained our CNN model using a large dataset, the real-time scenario introduces complexities due to environmental factors and camera influences. These variables pose obstacles in achieving consistently high accuracy during runtime.
+
+## Requirements for Success
+The project involves utilizing a Raspberry Pi 4, a Raspberry Pi Camera Module, an LCD Display Screen, and an Infrared Motion Sensor. Knowledge and proficiency in CNN models that yield high accuracy in waste classification, as well as programming skills to adapt the code, are necessary. Additionally, establishing a feedback system, such as setting up an LCD display and an infrared motion sensor, requires a certain level of expertise and understanding.
+
+## Metrics of Success
+Firstly, the system should achieve a high level of real-time accuracy, aiming for around 70%, to be considered successful. Secondly, prioritizing a positive user experience is crucial, and creating a user-friendly interface will greatly enhance the project’s success. Thirdly, evaluating the power consumption of the system is essential to ensure it is operating at a low cost.
+
 
 # 2. Related Work
+## Papers
+CleverTrash: An ML-based IoT system for waste sorting with continuous learning cycle. [1]
+In this paper, the authors utilize seven different CNN algorithms, conducting a comparative analysis of their outcomes. Their primary emphasis lies in the classification of recyclable waste items such as plastic PET, cardboard, and plastic packaging. Aligning with our objectives, their aim is to educate individuals on recycling sorting to minimize sorting errors. Furthermore, they encounter a challenge similar to ours, addressing the configuration of a Pi camera with specific parameters to obtain clear images.
+
+A smart recycling bin using waste image classification at the edge. [2]
+In this paper, the authors address both accuracy and power consumption concerns. Their models achieve an impressive accuracy of approximately 96%, and they successfully reduce the power consumption of one of their systems from the previous work by about 30% to 4.7W. These aspects align with our project considerations, and we can use their findings as a valuable reference to explore effective options for low power consumption.
+
+## Datasets
+We used datasets from Kaggle: Garbage Classification (12 classes) [3], Waste Classification data [4], Garbage Image Dataset [5], and Garbage Classification [6].
+
+## Software
+We employed the CNN MobileNetV3 model for waste classification and utilized Python to configure the LCD display APIs. We crafted a program to display the output classification category and provide proper suggestions to the user. Additionally, we used Python to configure the infrared motion sensor, enabling it to detect motion effectively.
+
 
 # 3. Technical Approach
 ![alt text](https://github.com/MichaeltheCoder7/Smart-Waste-Management-System-with-Waste-Classification/blob/main/docs/image2.png?raw=true)
@@ -45,6 +69,11 @@ The transfer learning process involved dividing this dataset into training and v
 For the training process, we employed the Adam optimizer with a learning rate set at 0.001, striking a balance between efficient learning and avoiding overshooting the minima in the loss landscape. The model was trained over 10 epochs, a duration found to be sufficient for achieving high accuracy without overfitting.
 
 In an effort to optimize the model for real-time execution on the Raspberry Pi 4, we employed Just-In-Time (JIT) compilation on the model. This technique significantly enhances the inference speed, allowing us to achieve higher frames per second (FPS) during real-time classification. This optimization was crucial for the seamless and responsive operation of our waste classification system in a live environment.
+
+## Feedback Mechanism
+To customize our feedback system, we incorporated a 16x2 LCD display to present the results and messages. We used the I2C LCD API to facilitate communication between the display and the processor. Initially, the display showcases the output classification categories (compost, recycle, landfill), accompanied by a corresponding score indicating the probability of the waste belonging to that category. This informs users about the percentage of the waste falling into a specific category.
+
+Subsequently, based on the 12 subcategories, we offer distinctive and personalized suggestions to guide users in ensuring accurate waste disposal. Given the limited dimensions of the 16x2 display, we organized messages across two or three pages, each displayed for 2.5 seconds. This deliberate approach allows users sufficient time to fully comprehend the information. By adopting this strategy, users gain clarity on which bin to use for disposal and understand the specific actions required for correct waste disposal.
 
 ## Power Saving
 To efficiently manage power consumption, our system employs a strategic power-saving mechanism centered around the use of an Infrared Motion Sensor. This sensor is crucial in controlling the activation of the system's high-energy components: the camera and the deep learning model. In its default state, the system remains in a low-power sleep mode, significantly reducing CPU usage and conserving energy. Activation occurs only when the Infrared Motion Sensor detects human motion, triggering the camera and the waste classification model into operation. A red LED serves as an indicator of this active state, providing visual feedback and assisting in monitoring the system’s operational status.
@@ -76,3 +105,18 @@ One of the system's standout features is its effective power management strategy
 
 
 # 6. References
+[1] Foukia, N. (2022). CleverTrash: An ML-based IoT system for waste sorting with continuous learning cycle. The Institute of Electrical and Electronics Engineers, Inc. (IEEE) Conference Proceedings. https://doi.org/10.1109/ICECET55527.2022.9872943
+
+[2] Li, X., & Grammenos, R. (2022). A smart recycling bin using waste image classification at the edge. arXiv.org. https://arxiv.org/abs/2210.00448
+
+[3] Garbage Classification (12 classes): https://www.kaggle.com/datasets/mostafaabla/garbage-classification
+
+[4] Waste Classification data: https://www.kaggle.com/datasets/techsash/waste-classification-data
+
+[5] Garbage Image Dataset https://www.kaggle.com/datasets/farzadnekouei/trash-type-image-dataset
+
+[6] Garbage Classification https://www.kaggle.com/datasets/asdasdasasdas/garbage-classification
+
+[7] MobileNetV3: https://keras.io/api/applications/mobilenet/
+
+[8] LCD API: https://github.com/dhylands/python_lcd/tree/master
