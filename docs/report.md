@@ -36,9 +36,11 @@ Firstly, the system should achieve a high level of real-time accuracy, aiming fo
 # 2. Related Work
 ## Papers
 CleverTrash: An ML-based IoT system for waste sorting with continuous learning cycle. [1]
+
 In this paper, the authors utilize seven different CNN algorithms, conducting a comparative analysis of their outcomes. Their primary emphasis lies in the classification of recyclable waste items such as plastic PET, cardboard, and plastic packaging. Aligning with our objectives, their aim is to educate individuals on recycling sorting to minimize sorting errors. Furthermore, they encounter a challenge similar to ours, addressing the configuration of a Pi camera with specific parameters to obtain clear images.
 
 A smart recycling bin using waste image classification at the edge. [2]
+
 In this paper, the authors address both accuracy and power consumption concerns. Their models achieve an impressive accuracy of approximately 96%, and they successfully reduce the power consumption of one of their systems from the previous work by about 30% to 4.7W. These aspects align with our project considerations, and we can use their findings as a valuable reference to explore effective options for low power consumption.
 
 ## Datasets
