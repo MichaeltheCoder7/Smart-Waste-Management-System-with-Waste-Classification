@@ -51,7 +51,7 @@ We employed the CNN MobileNetV3 model for waste classification and utilized Pyth
 
 
 # 3. Technical Approach
-![alt text](https://github.com/MichaeltheCoder7/Smart-Waste-Management-System-with-Waste-Classification/blob/main/docs/image2.png?raw=true)
+![alt text](https://github.com/MichaeltheCoder7/Smart-Waste-Management-System-with-Waste-Classification/blob/main/docs/media/image2.png?raw=true)
 
 ## Hardware components
 Raspberry Pi 4 serves as the central processing unit for the system, handling the computations needed for image processing and waste classification.
@@ -87,7 +87,7 @@ Post-activation, the system is designed to revert to sleep mode after a predeter
 ## Transfer learning metrics
 The implementation of transfer learning in our project yielded highly encouraging results. After undergoing 10 epochs of training, the system achieved a validation accuracy of 91.30%. This level of accuracy is indicative of the model's robust ability to accurately classify waste into the correct categories, demonstrating its effectiveness for real-world applications. Furthermore, the model attained a low validation loss of 0.2831, which underscores the efficiency of the learning process and the model's precision in making predictions. These metrics collectively affirm the success of the transfer learning approach in adapting the MobileNet V3 Large model to the specific requirements of our waste classification system.
 
-![alt text](https://github.com/MichaeltheCoder7/Smart-Waste-Management-System-with-Waste-Classification/blob/main/docs/image1.png?raw=true)
+![alt text](https://github.com/MichaeltheCoder7/Smart-Waste-Management-System-with-Waste-Classification/blob/main/docs/media/image1.png?raw=true)
 
 ## Real-time Results
 In our practical testing, which involved approximately 50 distinct waste items, the system demonstrated a promising accuracy rate of around 77% in correctly classifying items into recycle, landfill, and compost categories. While this accuracy is commendable, particularly for a real-world application, we identified several factors that may contribute to the classification errors observed. These include varying lighting conditions, the distance of the waste item from the camera, background noise, camera quality, and potential imbalances in the training dataset. Addressing these factors could further improve the system's accuracy and will be a focus for future enhancements.
